@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Accessibility</title>
+<link type="text/CSS" rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="body-container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Welcome to a new website!</h1>
+    <p>Your new home</p>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="topical.html">Topical</a>
+    <a class="active" href="accessibility.html">Accessibility</a>
+    <a href="cafeteria.html">Cafeteria</a>
+  </div>
+
+  <!-- The grid with two columns -->
+  <div class="row">
+
+    <!--Main/left column-->
+    <div class="main">
+      <h2>Accessibility</h2>
+
+      <h3>The accessibility of the site</h3>
+
+      <h4>The font</h4>
+      <p>
+        We decided to use Arial as the only font for the entire site conciously. 
+        According to <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="_blank" rel="noopener noreferrer"title="w3schools web safe fonts">w3schools</a>, it is "one of the safest web fonts," and "available on all major operating systems." 
+        <!--Used the attributes "noopener" and "noreferrer" based on recommendations from FreeCodeCamp: https://www.freecodecamp.org/news/what-is-tabnabbing/ -->
+      </p>
+      <p>
+        For the sake of having some variety however, we did alter the size and decoration of the text some places (i.e. bold, underline, font weight.)
+      </p>
+
+      <div class="divider-spacing"></div> <!-- Creates a small space -->
+
+      <h4>The colors</h4>
+      <p>
+        We went for this color scheme before we saw the message in Canvas... our bad. 
+        We could have chosen to change it, but decided against it as we have grown fond of the color scheme.
+        Orange does not typically cause an issue with red-green color blindness (at least not isolated, perhaps if there are green elements nearby).
+        We looked at <a href="https://www.datylon.com/blog/data-visualization-for-colorblind-readers" target="_blank" rel="noopener noreferrer" title="datylon.com data visualization for colorblind">this site</a> to gain some understanding on this topic.
+        <!--Used the attributes "noopener" and "noreferrer" based on recommendations from FreeCodeCamp: https://www.freecodecamp.org/news/what-is-tabnabbing/ -->
+      </p>
+      <p>
+        White background and black text tends to be the default for a lot of websites, which is part of the reason why we stuck to it.
+        There is the benefit of contrasts between background and text as well, as it makes it easy to read.
+        These colors feel clear, making the page easy on the eyes and not too busy or cluttered.
+      </p>
+
+      <div class="divider-spacing"></div> <!-- Creates a small space -->
+
+      <h4>Hyperlinks</h4>
+      <p>
+        We kept the hyperlinks blue, but also added some styling that communicates clearly when a user hovers over a link.
+        Both the color of the text and the text background change when the user does this.
+      </p>
+
+      <div class="divider-spacing"></div> <!-- Creates a small space -->
+
+      <h4>Sizing/responsiveness</h4>
+      <p>
+        Our site uses both grid and flex in order to make it somewhat responsive.
+        When the web browser window with changes, the layout changes.
+        For instance, the different columns stack on top of each other should the window width become small by using media queries (see comments in the style.css file, towards the bottom).
+        For larger windows, we decided to move the content closer to the middle of the page (as well as limit the max width) in an attempt to reduce the amount of head turning needed.
+      </p>
+
+      <div class="divider-spacing"></div> <!-- Creates a small space -->
+
+      <h4>Other things to note</h4>
+      <p>We used the language attribute on the html tag to declare the language of the page.</p>
+
+      <h4>Testing - Lighthouse</h4>
+      <img src="media/lighthouse-metrics.jpg" alt="Google Lighthouse test metrics">
+      <p>
+        The test of the page "index.html" of this site revealed no obvious issues. 
+        The text above details steps that were taken prior to this test, 
+        and it seems that at least some of the decisions we made contributed to the page not immediately standing out negatively in an automated test.
+      </p>
+
+    </div>
+
+    <!--Side content-->
+    <div class="side">
+      <h4>We also decided to include this side column for three out of the four pages.</h4>
+
+      <p>We felt that page(s) without this side bar felt... "naked".</p>
+      <p>
+        We could have changed things up on more pages, but decided against it due to both personal preference and for the sake of consistency with regards to the layout.
+      </p>
+      
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>

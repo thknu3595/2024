@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+  }
+/* Style of the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+  
+  /* Grid container for body content and footer */
+.body-container {
+  display: grid;
+  grid-template-rows:auto auto 1fr auto; /* Header is auto, nav menu is auto, Main content is 1 fr, Footer is auto */
+  min-height: 100vh;
+}
+  /* Header title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #ff8100;
+  color: black;
+}
+
+.header p {
+  font-size: 14pt;
+}
+  
+  /* - - - Navigation bar - - - */
+  /* top navigation bar */
+  .navbar {
+    display: flex;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* navigation bar links */
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ffd500;
+    color: black;
+  }
+  
+  /* Give a specific color for the active page in the nav bar*/
+  .navbar a.active {
+    color: black;
+    background-color: #ffd500;
+  }
+
+  /* Column container */
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Hyperlinked text */
+  .row a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: blue;
+  }
+
+  .row a:hover {
+    color: white;
+    background-color: #565656;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .divider-spacing {
+    height: 3px;
+  }
+
+  /* Create two unequal columns that sit next to each other */
+  /* Sidebar/right column */
+  .side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 500px;
+  }
+
+  .side img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Main column */
+  .main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+    max-width: 1000px;
+  }
+
+  .main img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    background: #ff8100;
+  }
+  
+
+  /* - - - CAFETERIA PAGE - - - */
+  /* Header title */
+  .header-cafeteria {
+  padding: 30px;
+  text-align: center;
+  background: #23c686;
+  color: black;
+  }
+
+  /* Styling the text */
+  .header-cafeteria h1 {
+    text-decoration: underline;
+  }
+
+  .header-cafeteria p {
+    font-weight: bold;
+  }
+  
+  .body-container-cafeteria p, h3 {
+    font-size: 14pt;
+  }
+
+  /* top navigation bar */
+  .navbar-cafeteria {
+    display: flex;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* navigation bar links */
+  .navbar-cafeteria a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* Change color on hover */
+  .navbar-cafeteria a:hover {
+    background-color: #99ccc0;
+    color: black;
+  }
+  
+  /* Give a specific color for the active page in the nav bar*/
+  .navbar-cafeteria a.active {
+    color: white;
+    background-color: #4e784f;
+  }
+  
+  /* Body, grid parts*/
+  .row-cafeteria {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Images in the body */
+  .body-container-cafeteria img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+  }
+
+  /* The three columns */
+  .first-cafeteria {
+  flex: 33.3%;
+  background-color: white;
+  padding: 12px;
+  max-width: 600px;
+  text-align: center;
+  }
+
+  .second-cafeteria {
+  flex: 33.4%;
+  background-color: white;
+  padding: 12px;
+  max-width: 600px;
+  text-align: center;
+  }
+
+  .third-cafeteria {
+  flex: 33.3%;
+  background-color: white;
+  padding: 12px;
+  max-width: 600px;
+  text-align: center;
+  }
+
+  .cafeteria-column-container {
+    padding: 12px;
+    max-width: 600px;
+    flex: 1;
+  }
+
+  /* Fake image, placeholder */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Footer */
+  .footer-cafeteria {
+    padding: 8px;
+    text-align: center;
+    background: #23c686;
+  }
+
+
+  /* - - - MEDIA QUERIES - - - */
+  
+  /* If the screen width is less than 700px, this makes the columns stack on top of each other for better viewing experience*/
+  @media (max-width: 700px) {
+    .row, .navbar, .row-cafeteria {   
+      flex-wrap: wrap;
+    }
+    .side, .main, .first-cafeteria, .second-cafeteria, .third-cafeteria {
+      flex: 100%; /* Uses flex: 100% to force columns to take up the entire width of the screen */
+      min-width: 0; /* Reset min-width to allow full width on smaller screen sizes */
+    }
+    .side, .first-cafeteria, .second-cafeteria, .third-cafeteria {
+      max-width: 100%;
+    }
+
+
+  }
+
+  /* Center the columns on larger screens, using the width of 720p as a threshold */
+  @media (min-width: 1281px) {
+    .row {
+        margin-left: 20%; /* Moves the container closer to the center*/
+        margin-right: 15%;
+        max-width: 1400px; /* Limits the maximal width of the entire layout */
+    }
+
+    .row-cafeteria {
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+      max-width: 1400px;
+    }
+
+    .cafeteria-column-container{
+      min-height: 300px;
+    }
+
+  }
+
+  /* Between the two sizes above, this will ensure the images stay somewhat at the same height level on the page,
+  as the top part's min height should be sufficient to keep the images at bay. 
+  N.B. would likely need to be altered if the text is edited to become longer!*/
+  @media (min-width: 700.1px) and (max-width: 1280px) {
+    .cafeteria-column-container{
+      min-height: 375px;
+    }
+  }
